@@ -107,3 +107,16 @@ Models from the [OpenCV Zoo](https://github.com/opencv/opencv_zoo) (YuNet, SFace
 
 - Each face is tracked across frames. A name is confirmed only when it wins at least 5 of the last 8 frames, which removes label flickering (yellow = checking, green = recognized, red = unknown).
 - Every confirmed recognition is logged to `data/log.csv` (date, time, name, score) with a 10-second cooldown per person.
+
+## Performance benchmark
+
+Measured with `python benchmark.py` (laptop CPU, webcam frames, average over 90 frames):
+
+| Resolution | Threads | Detect (ms) | Embed (ms) | Total (ms) | FPS |
+|---|---|---|---|---|---|
+| 640x480 | default | | | | |
+| 320x240 | default | | | | |
+| 640x480 | 1 | | | | |
+| 320x240 | 1 | | | | |
+
+Model sizes: YuNet ___ MB, SFace ___ MB. Process RAM: ___ MB.
