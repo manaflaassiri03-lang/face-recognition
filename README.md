@@ -114,9 +114,12 @@ Measured with `python benchmark.py` (laptop CPU, webcam frames, average over 90 
 
 | Resolution | Threads | Detect (ms) | Embed (ms) | Total (ms) | FPS |
 |---|---|---|---|---|---|
-| 640x480 | default | | | | |
-| 320x240 | default | | | | |
-| 640x480 | 1 | | | | |
-| 320x240 | 1 | | | | |
+| 640x480 | default (8) | 31.0 | 21.4 | 52.5 | 19.1 |
+| 480x360 | default (8) | 15.0 | 16.1 | 31.2 | 32.1 |
+| 320x240 | default (8) | 8.6 | 19.6 | 28.3 | 35.3 |
+| 640x480 | 1 | 30.7 | 29.0 | 59.8 | 16.7 |
+| 480x360 | 1 | 17.4 | 29.9 | 47.4 | 21.1 |
+| 320x240 | 1 | 7.4 | 30.6 | 38.1 | 26.3 |
 
+Model sizes: YuNet 0.23 MB, SFace 38.70 MB. Process RAM: about 187 MB (20 enrolled embeddings). Matching cost is negligible (about 0.1 ms).
 Model sizes: YuNet ___ MB, SFace ___ MB. Process RAM: ___ MB.
