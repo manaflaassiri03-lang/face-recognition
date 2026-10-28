@@ -102,3 +102,8 @@ Average speed on laptop CPU: ___ FPS. (Fill in with your own measurements.)
 ## Credits
 
 Models from the [OpenCV Zoo](https://github.com/opencv/opencv_zoo) (YuNet, SFace).
+
+## Stability filter and logging
+
+- Each face is tracked across frames. A name is confirmed only when it wins at least 5 of the last 8 frames, which removes label flickering (yellow = checking, green = recognized, red = unknown).
+- Every confirmed recognition is logged to `data/log.csv` (date, time, name, score) with a 10-second cooldown per person.
